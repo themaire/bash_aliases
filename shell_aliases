@@ -6,8 +6,6 @@ alias aload='systemctl apache2 reload'
 alias astart='systemctl apache2 restart'
 alias fname='find -name'
 alias hgrep='history | grep'
-
-# Update the system
 alias maj='sudo apt update && sudo apt upgrade'
-
 alias si='sudo -i'
+alias compile='gcc $(find ${pwd} -name "*.c") -o main && ./main'
