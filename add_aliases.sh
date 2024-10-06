@@ -4,14 +4,13 @@
 
 aliases="/home/$(whoami)/.bash_aliases"
 
-if [ ! -e $aliases ] # Test if this forlder exists.
+if [ -e $aliases ] # Test if this forlder exists.
 then
-  echo "Create ~/.bash_aliases file."
-  touch $aliases
-else
   rm $aliases
-  touch $aliases
 fi
+
+echo "(Re)Create ~/.bash_aliases file."
+touch $aliases
 
 for i in ./*aliases
 do
